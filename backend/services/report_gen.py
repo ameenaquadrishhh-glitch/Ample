@@ -6,7 +6,6 @@ from models.schemas import DetectionResult
 from core.config import settings
 
 def generate_report(detection: DetectionResult, filename: str) -> str:
-    """Generate a structured incident report using Claude AI."""
     try:
         client = anthropic.Anthropic(api_key=settings.anthropic_api_key)
 
@@ -29,8 +28,8 @@ Write a concise, professional incident report with these sections:
 Keep it factual and under 300 words."""
 
         message = client.messages.create(
-            model="claude-opus-4-5",
-            max_tokens=500,
+            model="claude-sonnet-4-6",
+            max_tokens=600,
             messages=[{"role": "user", "content": prompt}]
         )
         return message.content[0].text
