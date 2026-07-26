@@ -7,7 +7,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AMPLE — Security Operations Platform",
+  title: "AMPLE - Security Operations Platform",
   description: "Agentic Monitoring and Proactive Law Enforcement Engine",
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </nav>
-        <div class="pt-14">{children}</div>
+        <div className="pt-14">{children}</div>
       </body>
     </html>
   );

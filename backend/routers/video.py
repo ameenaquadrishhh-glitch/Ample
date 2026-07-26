@@ -27,7 +27,8 @@ async def upload_video(file: UploadFile = File(...)):
         detection = run_detection(tmp_path)
 
         # Step 2: Generate AI report
-        report = generate_report(detection, file.filename)
+        report = "THIS IS A TEST REPORT FROM VIDEO.PY"
+        print("REPORT RETURNED:", report)
 
         # Step 3: Save to Supabase
         incident_data = IncidentCreate(
